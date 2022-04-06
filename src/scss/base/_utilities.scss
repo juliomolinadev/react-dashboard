@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.text-center {
+	text-align: center;
+}
+
+.bg-primary {
+	background-color: v.$primary;
+}
+
+.bg-secondary {
+	background-color: v.$secondary;
+}
