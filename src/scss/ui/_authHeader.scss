@@ -1,0 +1,83 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.authHeader {
+	width: auto;
+	margin: 2rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	background-image: url(../../img/header-background2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	@include m.tablet {
+		min-height: 30rem;
+	}
+
+	@include m.monitor {
+		min-height: 40rem;
+		background-position-y: 60%;
+	}
+
+	&::before {
+		content: "";
+		background-color: v.$primary;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.8;
+		border-radius: 1rem;
+	}
+
+	&__bar {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+
+		@include m.desktop {
+			max-width: 70rem;
+			margin: 0 auto;
+		}
+	}
+
+	&__logo {
+		font-weight: 900;
+		color: v.$white;
+	}
+
+	&__nav {
+		display: flex;
+		gap: 1rem;
+
+		a {
+			color: v.$white;
+			font-weight: 700;
+			transition-property: color;
+			transition-duration: 300ms;
+
+			&:hover {
+				color: darken($color: v.$white, $amount: 20);
+			}
+
+			&.active {
+				color: v.$secondary;
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+		margin-top: 5rem;
+		color: v.$white;
+
+		span {
+			display: block;
+			font-size: 1.6rem;
+			font-weight: 400;
+		}
+	}
+}

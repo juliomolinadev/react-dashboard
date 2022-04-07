@@ -5,11 +5,9 @@ import { RegisterScreen } from "../components/auth/RegisterScreen";
 
 export const AuthRouter = () => {
 	return (
-		<div className="container">
-			<Routes>
-				<Route path="login" element={<LoginScreen />} />
-				<Route path="register" element={<RegisterScreen />} />
-			</Routes>
-		</div>
+		<Routes>
+			<Route path="login" element={<LoginScreen />} />
+			<Route path="register" element={<RegisterScreen />} />
+		</Routes>
 	);
 };

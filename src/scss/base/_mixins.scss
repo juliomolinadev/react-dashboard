@@ -19,6 +19,12 @@
 	}
 }
 
+@mixin monitor {
+	@media (min-width: v.$monitor) {
+		@content;
+	}
+}
+
 @mixin button($color, $text) {
 	background-color: $color;
 	font-size: 2rem;

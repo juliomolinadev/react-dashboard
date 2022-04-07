@@ -1,9 +1,12 @@
 import React from "react";
+import { AuthHeader } from "./AuthHeader";
+import { LoginForm } from "./LoginForm";
 
 export const LoginScreen = () => {
 	return (
-		<div>
-			<h2>Login Screen</h2>
-		</div>
+		<>
+			<AuthHeader />
+			<LoginForm />
+		</>
 	);
 };
