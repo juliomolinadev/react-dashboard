@@ -1,0 +1,35 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.authForm {
+	width: 95%;
+	margin: 2rem auto;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 15%);
+	background-color: v.$white;
+
+	@include m.tablet {
+		max-width: 32rem;
+		position: relative;
+		margin-top: -10rem;
+	}
+
+	&__heading {
+		margin-top: 2rem;
+		font-size: 1.8rem;
+		color: v.$secondary;
+	}
+
+	&__footer {
+		color: lighten(v.$secondary, 40);
+		font-size: 1.4rem;
+	}
+
+	&__link {
+		margin-left: 0.5rem;
+		text-decoration: none;
+		color: v.$secondary;
+		font-weight: 700;
+	}
+}

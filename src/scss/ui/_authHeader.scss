@@ -2,8 +2,8 @@
 @use "../base/mixins" as m;
 
 .authHeader {
-	width: auto;
-	margin: 2rem;
+	width: 95%;
+	margin: 1rem auto;
 	padding: 2rem;
 	border-radius: 1rem;
 	background-image: url(../../img/header-background2.jpg);
@@ -13,6 +13,8 @@
 	position: relative;
 
 	@include m.tablet {
+		margin: 1rem;
+		width: auto;
 		min-height: 30rem;
 	}
 

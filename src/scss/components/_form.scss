@@ -1,2 +1,32 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
 .form {
+	padding: 2rem;
+
+	&__inputGroup {
+		margin-bottom: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__label {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		color: v.$secondary;
+	}
+
+	&__input {
+		padding: 1rem;
+		border: 0.1rem solid lighten(v.$secondary, 70);
+		border-radius: 0.5rem;
+
+		&::placeholder {
+			color: lighten(v.$secondary, 60);
+		}
+	}
+
+	&__button {
+		@include m.button(v.$secondary, v.$white);
+	}
 }

@@ -1,34 +1,42 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const LoginForm = () => {
 	return (
-		<div className="authForm container">
-			<h2 className="authForm__heading">Inicio de sesión</h2>
+		<div className="authForm">
+			<h2 className="authForm__heading text-center">Inicio de sesión</h2>
 
-			<div className="authForm__form">
-				<div className="authForm__input">
-					<label htmlFor="email" className="authForm__label">
+			<form className="form">
+				<div className="form__inputGroup">
+					<label htmlFor="email" className="form__label">
 						Email:
 					</label>
-					<input id="email" type="email" className="authForm__input" placeholder="Tu email" />
+					<input id="email" type="email" className="form__input" placeholder="Tu email" />
 				</div>
 
-				<div className="authForm__input">
-					<label htmlFor="password" className="authForm__label">
-						Contraseña
+				<div className="form__inputGroup">
+					<label htmlFor="password" className="form__label">
+						Contraseña:
 					</label>
 					<input
 						id="password"
 						type="Password"
-						className="authForm__input"
+						className="form__input"
 						placeholder="Tu contraseña"
 					/>
 				</div>
 
-				<button className="authForm__submit" value="Buscar">
-					Iniciar sesión
+				<button className="form__button" value="Buscar">
+					Iniciar Sesión
 				</button>
-			</div>
+			</form>
+
+			<p className="authForm__footer text-center">
+				No tienes cuenta?{" "}
+				<Link to="/auth/register" className="authForm__link">
+					Registro
+				</Link>
+			</p>
 		</div>
 	);
 };

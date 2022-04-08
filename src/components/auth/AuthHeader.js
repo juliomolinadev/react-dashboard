@@ -16,7 +16,7 @@ export const AuthHeader = () => {
 			</div>
 			<div className="authHeader__text text-center">
 				<h1>
-					Bienvenido ! <span>Descripción del proyecto.</span>
+					Bienvenido! <span>Descripción del proyecto.</span>
 				</h1>
 			</div>
 		</header>

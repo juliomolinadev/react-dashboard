@@ -1,0 +1,14 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.authFooter {
+	&__text {
+		font-size: 1.2rem;
+		color: lighten(v.$secondary, 40);
+
+		span {
+			color: v.$secondary;
+			font-weight: 700;
+		}
+	}
+}
