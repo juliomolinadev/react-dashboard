@@ -1,9 +1,17 @@
 import React from "react";
 
+import { AuthFooter } from "./AuthFooter";
+import { AuthHeader } from "./AuthHeader";
+import { RegisterForm } from "./RegisterForm";
+
 export const RegisterScreen = () => {
 	return (
-		<div>
-			<h2>Register Screen</h2>
+		<div className="sectionContainer">
+			<div>
+				<AuthHeader />
+				<RegisterForm />
+			</div>
+			<AuthFooter />
 		</div>
 	);
 };

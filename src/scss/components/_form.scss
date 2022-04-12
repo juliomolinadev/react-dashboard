@@ -13,20 +13,20 @@
 	&__label {
 		font-size: 1.4rem;
 		margin-bottom: 1rem;
-		color: v.$secondary;
+		color: v.$primary;
 	}
 
 	&__input {
 		padding: 1rem;
-		border: 0.1rem solid lighten(v.$secondary, 70);
+		border: 0.1rem solid lighten(v.$primary, 70);
 		border-radius: 0.5rem;
 
 		&::placeholder {
-			color: lighten(v.$secondary, 60);
+			color: lighten(v.$primary, 60);
 		}
 	}
 
 	&__button {
-		@include m.button(v.$secondary, v.$white);
+		@include m.button(v.$primary, v.$white);
 	}
 }

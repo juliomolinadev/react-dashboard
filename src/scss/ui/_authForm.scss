@@ -8,6 +8,9 @@
 	border-radius: 1rem;
 	box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 15%);
 	background-color: v.$white;
+	position: relative;
+
+	@include m.fadeInBottom(50rem, 0rem);
 
 	@include m.tablet {
 		max-width: 32rem;
@@ -18,18 +21,18 @@
 	&__heading {
 		margin-top: 2rem;
 		font-size: 1.8rem;
-		color: v.$secondary;
+		color: v.$primary;
 	}
 
 	&__footer {
-		color: lighten(v.$secondary, 40);
+		color: lighten(v.$primary, 40);
 		font-size: 1.4rem;
 	}
 
 	&__link {
 		margin-left: 0.5rem;
 		text-decoration: none;
-		color: v.$secondary;
+		color: v.$primary;
 		font-weight: 700;
 	}
 }

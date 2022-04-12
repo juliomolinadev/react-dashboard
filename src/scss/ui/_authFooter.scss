@@ -4,10 +4,10 @@
 .authFooter {
 	&__text {
 		font-size: 1.2rem;
-		color: lighten(v.$secondary, 40);
+		color: lighten(v.$primary, 40);
 
 		span {
-			color: v.$secondary;
+			color: v.$primary;
 			font-weight: 700;
 		}
 	}

@@ -55,3 +55,18 @@
 	gap: $spacing;
 	grid-template-columns: repeat($columns, 1fr);
 }
+
+@mixin fadeInBottom($from, $to) {
+	animation-name: fadeInBottom;
+	animation-duration: 1000ms;
+	animation-fill-mode: forwards;
+
+	@keyframes fadeInBottom {
+		from {
+			top: $from;
+		}
+		to {
+			top: $to;
+		}
+	}
+}
