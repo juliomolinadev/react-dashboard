@@ -1,17 +1,28 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export const AuthHeader = () => {
 	return (
 		<header className="authHeader">
 			<div className="authHeader__bar">
-				<div className="authHeader__logo">LOGO</div>
+				<Link className="authHeader__logo" to="/auth/login">
+					LOGO
+				</Link>
 
 				<nav className="authHeader__nav">
-					<a className="activo" href="#">
+					<NavLink
+						className={({ isActive }) => "authHeader__link " + (isActive ? "active" : "")}
+						to="/auth/login"
+					>
 						Inicio
-					</a>
-					<a href="#">Nosotros</a>
-					<a href="#">Contacto</a>
+					</NavLink>
+
+					<NavLink
+						className={({ isActive }) => "authHeader__link " + (isActive ? "active" : "")}
+						to="/auth/register"
+					>
+						Registro
+					</NavLink>
 				</nav>
 			</div>
 			<div className="authHeader__text text-center">

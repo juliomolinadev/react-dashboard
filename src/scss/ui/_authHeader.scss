@@ -53,21 +53,22 @@
 
 	&__nav {
 		display: flex;
-		gap: 1rem;
+		gap: 2rem;
+	}
 
-		a {
-			color: v.$white;
-			font-weight: 700;
-			transition-property: color;
-			transition-duration: 300ms;
+	&__link {
+		text-decoration: none;
+		color: v.$white;
+		font-weight: 400;
+		transition-property: color;
+		transition-duration: 300ms;
 
-			&:hover {
-				color: darken($color: v.$white, $amount: 20);
-			}
+		&:hover {
+			color: darken($color: v.$white, $amount: 20);
+		}
 
-			&.active {
-				color: v.$primary;
-			}
+		&.active {
+			font-weight: 900;
 		}
 	}
 
