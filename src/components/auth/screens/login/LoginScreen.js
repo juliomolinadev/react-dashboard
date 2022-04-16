@@ -1,8 +1,8 @@
 import React from "react";
 
-import { AuthFooter } from "./AuthFooter";
-import { AuthHeader } from "./AuthHeader";
+import { AuthHeader } from "../../ui/AuthHeader";
 import { LoginForm } from "./LoginForm";
+import { AuthFooter } from "../../ui/AuthFooter";
 
 export const LoginScreen = () => {
 	return (

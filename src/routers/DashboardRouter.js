@@ -1,23 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Sidebar } from "../components/ui/Sidebar";
-import { HomeScreen } from "../components/sections/home/HomeScreen";
-import { Section2Screen } from "../components/sections/section2/Section2Screen";
-import { Section3Screen } from "../components/sections/section3/Section3Screen";
+import { HomeSection } from "../components/dashboard/sections/home/HomeSection";
+import { Section2Screen } from "../components/dashboard/sections/section2/Section2Screen";
+import { Section3Screen } from "../components/dashboard/sections/section3/Section3Screen";
 
 export const DashboardRouter = () => {
 	return (
-		<>
-			<Sidebar />
-
-			<div className="container">
-				<Routes>
-					<Route path="home" element={<HomeScreen />} />
-					<Route path="section2" element={<Section2Screen />} />
-					<Route path="section3" element={<Section3Screen />} />
-					<Route path="/" element={<HomeScreen />} />
-				</Routes>
-			</div>
-		</>
+		<div className="container">
+			<Routes>
+				<Route path="home" element={<HomeSection />} />
+				<Route path="section2" element={<Section2Screen />} />
+				<Route path="section3" element={<Section3Screen />} />
+				<Route path="/" element={<HomeSection />} />
+			</Routes>
+		</div>
 	);
 };

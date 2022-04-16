@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-export const Sidebar = () => {
+export const DashboardSidebar = () => {
 	const navigate = useNavigate();
 	const name = "julz";
 

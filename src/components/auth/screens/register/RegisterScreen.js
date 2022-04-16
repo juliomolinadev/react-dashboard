@@ -1,7 +1,7 @@
 import React from "react";
 
-import { AuthFooter } from "./AuthFooter";
-import { AuthHeader } from "./AuthHeader";
+import { AuthFooter } from "../../ui/AuthFooter";
+import { AuthHeader } from "../../ui/AuthHeader";
 import { RegisterForm } from "./RegisterForm";
 
 export const RegisterScreen = () => {
