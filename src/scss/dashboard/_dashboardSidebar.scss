@@ -1,0 +1,73 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.dashboardSidebar {
+	background-color: v.$white;
+	height: 100vh;
+	box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 15%);
+	position: sticky;
+	overflow: hidden;
+	@include m.transition(width, 500ms);
+
+	&--expanded {
+		width: 20rem;
+	}
+
+	&--colapsed {
+		width: 5.5rem;
+	}
+
+	&__expander {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: flex-end;
+		font-size: 3rem;
+		color: v.$primary;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: v.$secondary;
+		}
+	}
+
+	&__expanderIcon {
+		@include m.transition(transform, 300ms);
+
+		&--expanded {
+			transform: rotate(180deg);
+		}
+
+		&--colapsed {
+			transform: rotate(0deg);
+		}
+	}
+
+	&__exit {
+		margin: 0.5rem;
+	}
+
+	&__exitButton {
+		@include m.button(v.$primary, v.$white);
+		padding: 0;
+	}
+
+	&__exitIcon {
+		font-size: 2rem;
+		// margin-right: 1rem;
+		margin: 1rem;
+		transform: rotate(180deg);
+	}
+
+	&__exitLabel {
+		@include m.transition(width, 300ms);
+
+		&--expanded {
+			width: 5rem;
+		}
+
+		&--colapsed {
+			width: 0;
+			overflow: hidden;
+		}
+	}
+}

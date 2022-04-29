@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { DashboardScreen } from "../components/dashboard/DashboardScreen";
 
 import { AuthRouter } from "./AuthRouter";
-import { DashboardRouter } from "./DashboardRouter";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
@@ -22,7 +22,7 @@ export const AppRouter = () => {
 					path="/*"
 					element={
 						<PrivateRoute>
-							<DashboardRouter />
+							<DashboardScreen />
 						</PrivateRoute>
 					}
 				/>

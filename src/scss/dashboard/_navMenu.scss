@@ -1,0 +1,57 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.navMenu {
+	margin-top: 2rem;
+	background-color: v.$white;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	@include m.transition(width, 500ms);
+
+	&__link {
+		color: v.$primary;
+		margin: 0.5rem;
+		display: flex;
+		justify-content: flex-end;
+		text-align: end;
+		align-items: center;
+		@include m.transition(background-color, 300ms);
+
+		// cambiar a desktop
+		@include m.tablet {
+			text-align: start;
+			flex-direction: row-reverse;
+		}
+
+		&:hover {
+			background-color: lighten(v.$secondary, 37);
+			border-radius: 0.5rem;
+		}
+	}
+
+	&__active {
+		background-color: lighten(v.$secondary, 40);
+		border-radius: 0.5rem;
+		color: v.$secondary;
+		font-weight: 900;
+	}
+
+	&__label {
+		@include m.transition(width, 300ms);
+
+		&--expanded {
+			width: 5rem;
+		}
+
+		&--colapsed {
+			width: 0;
+			overflow: hidden;
+		}
+	}
+
+	&__icon {
+		margin: 1rem;
+		font-size: 2rem;
+	}
+}

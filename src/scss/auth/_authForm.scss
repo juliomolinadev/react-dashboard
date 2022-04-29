@@ -10,7 +10,7 @@
 	background-color: v.$white;
 	position: relative;
 
-	@include m.fadeInBottom(50rem, 0rem);
+	@include m.fadeInTop(50rem, 0rem, 1000ms);
 
 	@include m.tablet {
 		max-width: 32rem;
