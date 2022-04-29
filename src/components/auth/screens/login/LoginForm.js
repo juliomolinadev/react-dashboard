@@ -1,7 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
+import { login } from "../../../../actions/authActions";
+
 export const LoginForm = () => {
+	const dispatch = useDispatch();
+
+	const startLogin = () => {
+		dispatch(login());
+	};
+
 	return (
 		<div className="authForm">
 			<h2 className="authForm__heading text-center">Inicio de sesión</h2>
@@ -26,7 +35,7 @@ export const LoginForm = () => {
 					/>
 				</div>
 
-				<button className="form__button" value="Buscar">
+				<button className="form__button" value="Buscar" onClick={startLogin}>
 					Iniciar Sesión
 				</button>
 			</form>

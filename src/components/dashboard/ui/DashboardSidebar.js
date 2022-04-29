@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { MdKeyboardArrowRight, MdLogout } from "react-icons/md";
 
 import { NavMenu } from "./NavMenu";
 import { UserCard } from "./UserCard";
+import { logout } from "../../../actions/authActions";
 
 export const DashboardSidebar = () => {
+	const dispatch = useDispatch();
+
+	const startLogout = () => {
+		dispatch(logout());
+	};
+
 	const [isExpanded, setIsExpanded] = useState(true);
 
 	return (
@@ -29,7 +37,7 @@ export const DashboardSidebar = () => {
 			<NavMenu onClickFunction={() => {}} isExpanded={isExpanded} />
 
 			<div className="dashboardSidebar__exit">
-				<button className="dashboardSidebar__exitButton">
+				<button className="dashboardSidebar__exitButton" onClick={startLogout}>
 					<MdLogout className="dashboardSidebar__exitIcon" />
 					<div
 						className={`dashboardSidebar__exitLabel ${
