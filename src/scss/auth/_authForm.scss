@@ -10,7 +10,18 @@
 	background-color: v.$white;
 	position: relative;
 
-	@include m.fadeInTop(50rem, 0rem, 1000ms);
+	animation-name: fadeInAuthForm;
+	animation-duration: 1000ms;
+	animation-fill-mode: forwards;
+
+	@keyframes fadeInAuthForm {
+		from {
+			bottom: -40rem;
+		}
+		to {
+			bottom: 0rem;
+		}
+	}
 
 	@include m.tablet {
 		max-width: 32rem;

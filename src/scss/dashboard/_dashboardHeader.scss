@@ -30,5 +30,16 @@
 		overflow: hidden;
 		flex-basis: 5rem;
 		max-width: 2.5rem;
+		cursor: pointer;
+	}
+
+	&__icon {
+		color: v.$secondary;
+		cursor: pointer;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: darken(v.$secondary, 10);
+		}
 	}
 }

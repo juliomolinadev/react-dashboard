@@ -11,7 +11,7 @@ export const DashboardFooter = () => {
 		<nav className="dashboardFooter">
 			<div
 				className={`dashboardFooter__menu ${
-					isExpanded ? "dashboardFooter__menu--expanded" : "dashboardFooter__menu--colapsed"
+					isExpanded ? "dashboardFooter__menu--expanded" : "dashboardFooter__menu--collapsed"
 				}`}
 			>
 				<NavMenu onClickFunction={setIsExpanded} />

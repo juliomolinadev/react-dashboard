@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { MdHomeFilled, MdMenu } from "react-icons/md";
+import { MdHomeFilled, MdMenu, MdSettings } from "react-icons/md";
 
 export const NavMenu = ({ onClickFunction, isExpanded = true }) => {
 	return (
@@ -12,7 +12,7 @@ export const NavMenu = ({ onClickFunction, isExpanded = true }) => {
 			>
 				<div
 					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--colapsed"
+						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
 					}`}
 				>
 					Home
@@ -27,7 +27,7 @@ export const NavMenu = ({ onClickFunction, isExpanded = true }) => {
 			>
 				<div
 					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--colapsed"
+						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
 					}`}
 				>
 					Section2
@@ -42,12 +42,27 @@ export const NavMenu = ({ onClickFunction, isExpanded = true }) => {
 			>
 				<div
 					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--colapsed"
+						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
 					}`}
 				>
 					Section3
 				</div>
 				<MdMenu className="navMenu__icon" />
+			</NavLink>
+
+			<NavLink
+				onClick={() => onClickFunction(false)}
+				className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
+				to="/settings"
+			>
+				<div
+					className={`navMenu__label ${
+						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
+					}`}
+				>
+					Settings
+				</div>
+				<MdSettings className="navMenu__icon" />
 			</NavLink>
 		</div>
 	);

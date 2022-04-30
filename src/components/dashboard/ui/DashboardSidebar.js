@@ -4,21 +4,17 @@ import { MdKeyboardArrowRight, MdLogout } from "react-icons/md";
 
 import { NavMenu } from "./NavMenu";
 import { UserCard } from "./UserCard";
-import { logout } from "../../../actions/authActions";
+import { logout } from "../../../actions/auth/authActions";
 
 export const DashboardSidebar = () => {
 	const dispatch = useDispatch();
-
-	const startLogout = () => {
-		dispatch(logout());
-	};
 
 	const [isExpanded, setIsExpanded] = useState(true);
 
 	return (
 		<div
 			className={`dashboardSidebar ${
-				isExpanded ? "dashboardSidebar--expanded" : "dashboardSidebar--colapsed"
+				isExpanded ? "dashboardSidebar--expanded" : "dashboardSidebar--collapsed"
 			}`}
 		>
 			<div className="dashboardSidebar__expander">
@@ -27,7 +23,7 @@ export const DashboardSidebar = () => {
 					className={`dashboardSidebar__expanderIcon ${
 						isExpanded
 							? "dashboardSidebar__expanderIcon--expanded"
-							: "dashboardSidebar__expanderIcon--colapsed"
+							: "dashboardSidebar__expanderIcon--collapsed"
 					}`}
 				/>
 			</div>
@@ -37,13 +33,14 @@ export const DashboardSidebar = () => {
 			<NavMenu onClickFunction={() => {}} isExpanded={isExpanded} />
 
 			<div className="dashboardSidebar__exit">
-				<button className="dashboardSidebar__exitButton" onClick={startLogout}>
+				<button className="dashboardSidebar__exitButton" onClick={() => dispatch(logout())}>
 					<MdLogout className="dashboardSidebar__exitIcon" />
+
 					<div
 						className={`dashboardSidebar__exitLabel ${
 							isExpanded
 								? "dashboardSidebar__exitLabel--expanded"
-								: "dashboardSidebar__exitLabel--colapsed"
+								: "dashboardSidebar__exitLabel--collapsed"
 						}`}
 					>
 						Salir

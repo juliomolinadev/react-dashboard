@@ -11,20 +11,27 @@
 	&__userImage {
 		border-radius: 50%;
 		overflow: hidden;
-		max-width: 8rem;
+		max-width: 6rem;
+		position: relative;
 	}
 
 	&__name {
 		text-align: center;
 		color: v.$textColor;
+		font-size: 1.2rem;
 		font-weight: 700;
-		// @include m.transition(width, 300ms);
+		border-radius: 0.5rem;
+		margin-top: -3rem;
 
 		&--expanded {
-			width: 20rem;
+			padding: 2.4rem 1rem 1rem 1rem;
+			border: 0.1rem solid lighten(v.$secondary, 30);
+			width: 12rem;
 		}
 
-		&--colapsed {
+		&--collapsed {
+			padding: 0;
+			border: none;
 			width: 0;
 			overflow: hidden;
 		}

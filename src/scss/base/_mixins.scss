@@ -58,51 +58,6 @@
 	grid-template-columns: repeat($columns, 1fr);
 }
 
-@mixin fadeInBottom($from, $to, $duration) {
-	animation-name: fadeInBottom;
-	animation-duration: $duration;
-	animation-fill-mode: forwards;
-
-	@keyframes fadeInBottom {
-		from {
-			bottom: $from;
-		}
-		to {
-			bottom: $to;
-		}
-	}
-}
-
-@mixin fadeOutBottom($from, $to, $duration) {
-	animation-name: fadeOutBottom;
-	animation-duration: $duration;
-	animation-fill-mode: forwards;
-
-	@keyframes fadeOutBottom {
-		from {
-			bottom: $from;
-		}
-		to {
-			bottom: $to;
-		}
-	}
-}
-
-@mixin fadeInTop($from, $to, $duration) {
-	animation-name: fadeInBottom;
-	animation-duration: $duration;
-	animation-fill-mode: forwards;
-
-	@keyframes fadeInBottom {
-		from {
-			top: $from;
-		}
-		to {
-			top: $to;
-		}
-	}
-}
-
 @mixin transition($property, $time) {
 	transition: $property $time ease-in-out;
 }

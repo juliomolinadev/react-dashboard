@@ -1,0 +1,66 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.userPopover {
+	background-color: v.$white;
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 15%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem;
+	max-width: 50rem;
+	position: absolute;
+	top: 6rem;
+	right: 1rem;
+
+	animation-name: userPopoverFadeIn;
+	animation-duration: 1000ms;
+	animation-fill-mode: forwards;
+
+	@keyframes userPopoverFadeIn {
+		from {
+			top: -20rem;
+		}
+		to {
+			top: 6rem;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		right: -0.6rem;
+		top: -2.7rem;
+		transform: rotate(270deg);
+		font-size: 6rem;
+		color: v.$white;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		&--settings {
+			@include m.button(v.$secondary, v.$white);
+			margin: 0;
+			padding: 0.5rem;
+			font-size: 1.2rem;
+			width: 10rem;
+		}
+
+		&--exit {
+			@include m.button(v.$primary, v.$white);
+			margin: 0;
+			padding: 0.5rem;
+			font-size: 1.2rem;
+			width: 10rem;
+		}
+	}
+
+	&__icon {
+		transform: rotate(180deg);
+		font-size: 1.5rem;
+	}
+}

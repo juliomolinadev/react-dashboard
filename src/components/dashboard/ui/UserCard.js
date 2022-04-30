@@ -9,7 +9,7 @@ export const UserCard = ({ isExpanded }) => {
 
 			<div
 				className={`userCard__name ${
-					isExpanded ? "userCard__name--expanded" : "userCard__name--colapsed"
+					isExpanded ? "userCard__name--expanded" : "userCard__name--collapsed"
 				}`}
 			>
 				Nombre de Usuario

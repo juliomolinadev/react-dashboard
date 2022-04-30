@@ -17,11 +17,11 @@
 
 		&--expanded {
 			// aumentar segun el numero de links en el menu
-			height: 20rem;
+			height: 25rem;
 			overflow: visible;
 		}
 
-		&--colapsed {
+		&--collapsed {
 			height: 0rem;
 			overflow: hidden;
 		}

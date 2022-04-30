@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { login } from "../../../../actions/authActions";
+import { login } from "../../../../actions/auth/authActions";
 
 export const LoginForm = () => {
 	const dispatch = useDispatch();
