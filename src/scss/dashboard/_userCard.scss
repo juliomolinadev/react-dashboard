@@ -5,14 +5,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
 	padding: 1rem;
 
 	&__userImage {
 		border-radius: 50%;
 		overflow: hidden;
 		max-width: 6rem;
-		position: relative;
 	}
 
 	&__name {
@@ -20,13 +18,10 @@
 		color: v.$textColor;
 		font-size: 1.2rem;
 		font-weight: 700;
-		border-radius: 0.5rem;
-		margin-top: -3rem;
+		padding: 1rem;
 
 		&--expanded {
-			padding: 2.4rem 1rem 1rem 1rem;
-			border: 0.1rem solid lighten(v.$secondary, 30);
-			width: 12rem;
+			// width: 1rem;
 		}
 
 		&--collapsed {
