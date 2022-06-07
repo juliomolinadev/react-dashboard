@@ -45,17 +45,17 @@
 		&--settings {
 			@include m.button(v.$secondary, v.$white);
 			margin: 0;
-			padding: 0.5rem;
-			font-size: 1.2rem;
-			width: 10rem;
+			padding: 0.6rem;
+			font-size: 1.3rem;
+			width: 12rem;
 		}
 
 		&--exit {
 			@include m.button(v.$primary, v.$white);
 			margin: 0;
-			padding: 0.5rem;
-			font-size: 1.2rem;
-			width: 10rem;
+			padding: 0.6rem;
+			font-size: 1.3rem;
+			width: 12rem;
 		}
 	}
 
