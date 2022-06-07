@@ -3,67 +3,48 @@ import { NavLink } from "react-router-dom";
 import { MdHomeFilled, MdMenu, MdSettings } from "react-icons/md";
 
 export const NavMenu = ({ onClickFunction, isExpanded = true }) => {
+	const sections = [
+		{
+			pad: "/home",
+			label: "Home",
+			icon: MdHomeFilled
+		},
+		{
+			pad: "/section2",
+			label: "Section2",
+			icon: MdMenu
+		},
+		{
+			pad: "/section3",
+			label: "Section3",
+			icon: MdMenu
+		},
+		{
+			pad: "/settings",
+			label: "Settings",
+			icon: MdSettings
+		}
+	];
+
 	return (
 		<div className="navMenu">
-			<NavLink
-				onClick={() => onClickFunction(false)}
-				className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
-				to="/home"
-			>
-				<div
-					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
-					}`}
+			{sections.map((section) => (
+				<NavLink
+					key={section.label}
+					onClick={() => onClickFunction(false)}
+					className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
+					to={section.pad}
 				>
-					Home
-				</div>
-				<MdHomeFilled className="navMenu__icon" />
-			</NavLink>
-
-			<NavLink
-				onClick={() => onClickFunction(false)}
-				className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
-				to="/section2"
-			>
-				<div
-					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
-					}`}
-				>
-					Section2
-				</div>
-				<MdMenu className="navMenu__icon" />
-			</NavLink>
-
-			<NavLink
-				onClick={() => onClickFunction(false)}
-				className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
-				to="/section3"
-			>
-				<div
-					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
-					}`}
-				>
-					Section3
-				</div>
-				<MdMenu className="navMenu__icon" />
-			</NavLink>
-
-			<NavLink
-				onClick={() => onClickFunction(false)}
-				className={({ isActive }) => "navMenu__link" + (isActive ? " navMenu__active" : "")}
-				to="/settings"
-			>
-				<div
-					className={`navMenu__label ${
-						isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
-					}`}
-				>
-					Settings
-				</div>
-				<MdSettings className="navMenu__icon" />
-			</NavLink>
+					<div
+						className={`navMenu__label ${
+							isExpanded ? "navMenu__label--expanded" : "navMenu__label--collapsed"
+						}`}
+					>
+						{section.label}
+					</div>
+					<section.icon className="navMenu__icon" />
+				</NavLink>
+			))}
 		</div>
 	);
 };
