@@ -41,7 +41,7 @@
 		@include m.transition(width, 300ms);
 
 		&--expanded {
-			width: 5rem;
+			width: auto;
 		}
 
 		&--collapsed {
