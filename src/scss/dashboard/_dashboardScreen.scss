@@ -2,9 +2,11 @@
 @use "../base/mixins" as m;
 
 .dashboardScreen {
-	@include m.tablet {
-		display: flex;
-	}
+	display: flex;
+	max-width: 144rem;
+	margin: 0 auto;
+	background-color: v.$appBackground;
+	height: 100%;
 
 	&__main {
 		width: 100%;
